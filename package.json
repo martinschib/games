@@ -1,0 +1,13 @@
+{
+  "name": "gamespage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild ./src/index.ts --bundle --outfile=./public/out.js",
+    "dev": "esbuild ./src/index.ts --bundle --outfile=./public/out.js --watch"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.47"
+  }
+}
