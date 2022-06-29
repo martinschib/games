@@ -11,14 +11,20 @@
   </head>
 
   <body>
-    <div name="header" class="bg-lime-500">
-      <h1 class="text-white font-bold text-lg text-center h-20">
+    <div name="header" class="bg-lime-500 p-2">
+      <h1 class="font-medium leading-tight text-3xl mt-1 mb-2 text-white text-center">
         Dette er en testside
       </h1>
     </div>
-
-      <div name="grid" class="max-w-screen-md grid grid-cols-3 gap-4 bg-slate-500">
-        <div name="sudoku" class="py-4 flex flex-col shadow-sm bg-white rounded-xl m-1 p-2">
+    <div class="flex place-content-center ">
+      <div
+        name="grid"
+        class="max-w-screen-md grid grid-cols-2 sm:grid-flow-col sm:auto-cols-max gap-4 "
+      >
+        <div
+          name="sudoku"
+          class="py-4 flex flex-col shadow-lg bg-white rounded-xl m-1 p-2"
+        >
           <h5 class="card-title text-center">Sudoku</h5>
           <img
             src="./public/images/Sudoku Publico3.png"
@@ -36,8 +42,14 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-
-      </div>
+        </div>
+        
+    </div>
+    </div>
+    <div name="header" class="bg-lime-500 p-2">
+      <h1 class="font-medium leading-tight text-3xl mt-1 mb-2 text-white text-center">
+        bunnen av testen
+      </h1>
     </div>
     <script src="./public/out.js"></script>
   </body>
