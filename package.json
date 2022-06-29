@@ -5,9 +5,14 @@
   "license": "MIT",
   "scripts": {
     "build": "esbuild ./src/index.ts --bundle --outfile=./public/out.js",
-    "dev": "esbuild ./src/index.ts --bundle --outfile=./public/out.js --watch"
+    "dev:js": "esbuild ./src/index.ts --bundle --outfile=./public/out.js --watch",
+    "dev:css": "npx tailwindcss -i ./src/input.css -o ./public/out.css --watch",
+    "dev": "concurrently --kill-others \"yarn dev:js\" \"yarn dev:css\""
   },
   "dependencies": {
     "esbuild": "^0.14.47"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
   }
 }

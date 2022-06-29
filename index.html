@@ -5,41 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link re />
-    <link rel="stylesheet" href="./public/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/out.css" />
 
     <title>Document</title>
   </head>
 
   <body>
-    <div name="gameblob1" class="bg-primary p-4">
-      <div class="container">
-        <h1 class="text-light">Test</h1>
-      </div>
+    <div name="header" class="bg-lime-500">
+      <h1 class="text-white font-bold text-lg text-center h-20">
+        Dette er en testside
+      </h1>
     </div>
-    <div class="container">
-      <div name="sudoku" class="game" style="width: 17rem">
-        <div class="card m-3">
-          <div
-            class="card-body"
-            style="background-color: rgba(246, 188, 0, 0.913)"
-          >
-            <h5 class="card-title text-center">Sudoku</h5>
 
-            <img
-              src="./public/images/Sudoku Publico3.png"
-              class="mx-auto"
-              style="width: 8rem; display: block"
-              alt="Suoku image"
-            />
-          </div>
+      <div name="grid" class="max-w-screen-md grid grid-cols-3 gap-4 bg-slate-500">
+        <div name="sudoku" class="py-4 flex flex-col shadow-sm bg-white rounded-xl m-1 p-2">
+          <h5 class="card-title text-center">Sudoku</h5>
+          <img
+            src="./public/images/Sudoku Publico3.png"
+            alt="Suoku image"
+            class="w-10 self-center"
+          />
           <div class="card-footer text-center">
-            <a href="#" class="btn btn-primary">Gå til spillet</a>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Gå til spillet
+            </button>
           </div>
-        </div>
-        <p class="card-text mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+          <p class="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
       </div>
     </div>
     <script src="./public/out.js"></script>
