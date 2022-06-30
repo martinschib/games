@@ -1,56 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link re />
-    <link rel="stylesheet" href="./public/out.css" />
 
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <div name="header" class="bg-lime-500 p-2">
-      <h1 class="font-medium leading-tight text-3xl mt-1 mb-2 text-white text-center">
-        Dette er en testside
-      </h1>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arima:wght@500&family=Rubik+Moonrocks&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./public/out.css" />
+  <link rel="stylesheet" href="./public/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div name="header" class="bg-lime-500 p-2">
+    <h1 class="font-medium leading-tight text-3xl mt-1 mb-2 text-white">
+      Alle spill (test)
+    </h1>
+  </div>
+  <div class="max-w-screen-md" style="margin-left: auto; margin-right: auto; display: block">
+    <div>
+      <h2 class="font-medium leading-tight text-6xl mt-1 mb-2 text-black text-center" style="letter-spacing: 1px;">
+        Hjernetrimm
+      </h2>
     </div>
-    <div class="flex place-content-center ">
-      <div
-        name="grid"
-        class="max-w-screen-md grid grid-cols-2 sm:grid-flow-col sm:auto-cols-max gap-4 "
-      >
+    <div class="grid md:gap-6 gap-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-2">
+      <a href="https://www.aftenposten.no/tag/quiz">
         <div
-          name="sudoku"
-          class="py-4 flex flex-col shadow-lg bg-white rounded-xl m-1 p-2"
-        >
-          <h5 class="card-title text-center">Sudoku</h5>
-          <img
-            src="./public/images/Sudoku Publico3.png"
-            alt="Suoku image"
-            class="w-10 self-center"
-          />
-          <div class="card-footer text-center">
-            <button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Gå til spillet
-            </button>
-          </div>
-          <p class="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          class="flex flex-col gap-6 pt-6 justify-between shadow-md rounded-md border border-gray-500 hover:border-2 hover:border-gray-900"
+          style="background-color: #adbb95">
+          <h4 class="font-medium leading-tight text-3xl text-black text-center">
+            Quiz
+          </h4>
+          <img src="./public/images/quiz.svg" alt="Quiz image" class="h-28 self-center" />
+          <button
+            class="bg-gray-900 text-3xl self-center hover:shadow-lg w-full hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto">
+            Gå til Quiz
+          </button>
         </div>
-        
-    </div>
-    </div>
-    <div name="header" class="bg-lime-500 p-2">
-      <h1 class="font-medium leading-tight text-3xl mt-1 mb-2 text-white text-center">
-        bunnen av testen
-      </h1>
+      </a>
+      <a href="https://www.aftenposten.no/tag/quiz">
+        <div
+          class="flex flex-col gap-6 pt-6 justify-between shadow-md rounded-md border border-gray-500 hover:border-2 hover:border-gray-900"
+          style="background-color: #5a4c93">
+          <h4 class="font-medium leading-tight text-3xl text-white text-center">
+            Sudoku
+          </h4>
+          <img src="./public/images/Sudoku.svg" alt="Quiz image" class="h-28 self-center" />
+          <button
+            class="bg-gray-900 text-3xl self-center hover:shadow-lg w-full hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto">
+            Spill
+          </button>
+        </div>
+      </a>
+      <a href="https://www.aftenposten.no/tag/quiz">
+        <div
+          class="flex flex-col gap-6 pt-6 justify-between shadow-md rounded-md border border-gray-500 hover:border-2 hover:border-gray-900"
+          style="background-color: #d8e3f3">
+          <h4 class="font-medium leading-tight text-3xl text-black text-center">
+            Kryssord
+          </h4>
+          <img src="./public/images/quiz.svg" alt="Quiz image" class="h-28 self-center" />
+          <button
+            class="bg-gray-900 text-3xl self-center hover:shadow-lg w-full hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto">
+            Spill
+          </button>
+        </div>
+      </a>
+      <a href="https://www.aftenposten.no/tag/quiz">
+        <div
+          class="flex flex-col gap-6 pt-6 justify-between shadow-md rounded-md border border-gray-500 hover:border-2 hover:border-gray-900"
+          style="background-color: #adbb95">
+          <h4 class="font-medium leading-tight text-3xl text-black text-center">
+            Quiz
+          </h4>
+          <img src="./public/images/quiz.svg" alt="Quiz image" class="h-28 self-center" />
+          <button
+            class="bg-gray-900 self-center hover:shadow-lg w-full hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto">
+            Gå til Quiz
+          </button>
+        </div>
+      </a>
     </div>
     <script src="./public/out.js"></script>
-  </body>
+</body>
+
 </html>
+
+
+
+<!--
+
+
+   <div>
+          <button>
+            <div
+              class="flex flex-col shadow-lg rounded-md m-1 px-11 py-6 gap-6 border border-gray-500"
+              style="background-color: #5a4c93"
+            >
+              <h4
+                class="font-medium leading-tight text-3xl mt-1 mb-2 text-white text-center"
+              >
+                Sudoku
+              </h4>
+              <img
+                src="./public/images/Sudoku.svg"
+                alt="Suoku image"
+                class="w-36 self-center"
+              />
+            </div>
+          </button>
+          <button
+            class="bg-gray-900 self-center hover:shadow-lg hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto"
+          >
+            Spill
+          </button>
+        </div>
+
+
+
+        <div>
+          <button>
+            <div
+              class="flex flex-col shadow-lg rounded-md m-1 px-11 py-6 gap-6 border border-gray-500"
+              style="background-color: #d8e3f3"
+            >
+              <h4
+                class="font-medium leading-tight text-3xl mt-1 text-black text-center"
+              >
+                Kryssord
+              </h4>
+              <img
+                src="./public/images/kryssord.svg"
+                alt="Suoku image"
+                class="w-36 self-center"
+              />
+            </div>
+          </button>
+          <button
+            class="bg-gray-900 self-center hover:shadow-lg hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto"
+          >
+            Spill
+          </button>
+        </div>
+        <div>
+          <button>
+            <div
+              class="flex flex-col shadow-lg rounded-md m-1 px-11 py-6 gap-6 border border-gray-500"
+              style="background-color: #d8e3f3"
+            >
+              <h4
+                class="font-medium leading-tight text-3xl mt-1 text-black text-center"
+              >
+                Kryssord
+              </h4>
+              <img
+                src="./public/images/kryssord.svg"
+                alt="Suoku image"
+                class="w-36 self-center"
+              />
+            </div>
+          </button>
+          <button
+            class="bg-gray-900 self-center hover:shadow-lg hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"
+            style="display: block; margin-left: auto; margin-right: auto"
+          >
+            Spill
+          </button>
+        </div>
+      </div>
+-->
