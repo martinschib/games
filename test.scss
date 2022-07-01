@@ -4,10 +4,10 @@
 $field-width: 500px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
-$tile-size: calc(($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells);
+$tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 $tile-border-radius: 3px;
 
-$mobile-threshold: calc($field-width + 20px);
+$mobile-threshold: $field-width + 20px;
 
 $text-color: #776E65;
 $bright-text-color: #f9f6f2;
@@ -25,9 +25,14 @@ html, body {
   margin: 0;
   padding: 0;
 
+  background: #faf8ef;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
+}
+
+body {
+  margin: 80px 0;
 }
 
 .heading {
@@ -42,7 +47,7 @@ h1.title {
   float: left;
 }
 
-@keyframes move-up {
+@include keyframes(move-up) {
   0% {
     top: 25px;
     opacity: 1;
@@ -102,7 +107,7 @@ h1.title {
 }
 
 .score-container:after {
-  content: "Poeng";
+  content: "Score";
 }
 
 .best-container:after {
@@ -140,7 +145,7 @@ hr {
   margin: 0 auto;
 }
 
-@keyframes fade-in {
+@include keyframes(fade-in) {
   0% {
     opacity: 0;
   }
@@ -173,19 +178,22 @@ hr {
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
     -ms-touch-action: none;
     touch-action: none;
 
     background: $game-container-background;
-    border-radius: calc($tile-border-radius * 2);
+    border-radius: $tile-border-radius * 2;
     width: $field-width;
     height: $field-width;
-    
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    .game-message, .game-message-start {
+    .game-message {
       display: none;
 
       position: absolute;
@@ -291,8 +299,8 @@ hr {
     @for $x from 1 through $grid-row-cells {
       @for $y from 1 through $grid-row-cells {
         &.tile-position-#{$x}-#{$y} {
-          $xPos: calc(floor(($tile-size + $grid-spacing) * ($x - 1)));
-          $yPos: calc(floor(($tile-size + $grid-spacing) * ($y - 1)));
+          $xPos: floor(($tile-size + $grid-spacing) * ($x - 1));
+          $yPos: floor(($tile-size + $grid-spacing) * ($y - 1));
           @include transform(translate($xPos, $yPos));
         }
       }
@@ -346,7 +354,7 @@ hr {
 
     &.tile-#{$power} .tile-inner {
       // Calculate base background color
-      $gold-percent: calc(($exponent - 1) / ($limit - 1) * 100);
+      $gold-percent: ($exponent - 1) / ($limit - 1) * 100;
       $mixed-background: mix($tile-gold-color, $tile-color, $gold-percent);
 
       $nth-color: nth($special-colors, $exponent);
@@ -366,11 +374,11 @@ hr {
       background: $mixed-background;
 
       // Add glow
-      $glow-opacity: calc(max($exponent - 4, 0) / ($limit - 4));
+      $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
 
       @if not $special-background {
-        box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, calc($glow-opacity / 1.8)),
-                    inset 0 0 0 1px rgba(white, calc($glow-opacity / 3));
+        box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, $glow-opacity / 1.8),
+                    inset 0 0 0 1px rgba(white, $glow-opacity / 3);
       }
 
       // Adjust font size for bigger numbers
@@ -390,7 +398,7 @@ hr {
       }
     }
 
-    $exponent: calc($exponent + 1);
+    $exponent: $exponent + 1;
   }
 
   // Super tiles (above 2048)
@@ -406,7 +414,7 @@ hr {
   }
 }
 
-@keyframes appear {
+@include keyframes(appear) {
   0% {
     opacity: 0;
     @include transform(scale(0));
@@ -423,7 +431,7 @@ hr {
   @include animation-fill-mode(backwards);
 }
 
-@keyframes pop {
+@include keyframes(pop) {
   0% {
     @include transform(scale(0));
   }
@@ -453,27 +461,23 @@ hr {
   margin-bottom: 0;
 }
 
-.restart-button, .start-button  {
+.restart-button {
   @include button;
   display: block;
   text-align: center;
   float: right;
 }
-.start-button {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
+
 .game-explanation {
   margin-top: 50px;
 }
 
-@include smaller($mobile-threshold) {
+@mixin smaller($mobile-threshold) {
   // Redefine variables for smaller screens
   $field-width: 280px;
   $grid-spacing: 10px;
   $grid-row-cells: 4;
-  $tile-size: calc(($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells);
+  $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
   $tile-border-radius: 3px;
   $game-container-margin-top: 17px;
 
@@ -514,7 +518,7 @@ hr {
     line-height: 1.65;
   }
 
-  .restart-button, .start-button {
+  .restart-button {
     width: 42%;
     padding: 0;
     display: block;
@@ -530,7 +534,7 @@ hr {
     font-size: 35px;
   }
 
-  .game-message, .game-message-start {
+  .game-message {
     p {
       font-size: 30px !important;
       height: 30px !important;
@@ -542,5 +546,4 @@ hr {
       margin-top: 30px !important;
     }
   }
- 
 }

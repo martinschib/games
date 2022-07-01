@@ -130,9 +130,6 @@ hr {
   cursor: default;
   -webkit-touch-callout: none;
   -ms-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
   background: #bbada0;
@@ -574,9 +571,6 @@ hr {
     cursor: default;
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
     background: #bbada0;
