@@ -1,9 +1,0 @@
-h1,h2,h3,h4 {
-    letter-spacing: 1px;
-}
-
-@font-face {
-    font-family: "product";
-    src: url('https://cdn.aftenposten.no/ap/fonts/produkt/ProduktXXCond-Semibold.woff2') format('woff2'),
-      url('https://cdn.aftenposten.no/ap/fonts/produkt/ProduktXXCond-Semibold.woff2') format('woff');
-}
