@@ -193,7 +193,7 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    .game-message {
+    .game-message, .game-message-start {
       display: none;
 
       position: absolute;
@@ -461,7 +461,7 @@ hr {
   margin-bottom: 0;
 }
 
-.restart-button {
+.restart-button, .start-button  {
   @include button;
   display: block;
   text-align: center;
@@ -518,7 +518,7 @@ hr {
     line-height: 1.65;
   }
 
-  .restart-button {
+  .restart-button, .start-button {
     width: 42%;
     padding: 0;
     display: block;
@@ -534,7 +534,7 @@ hr {
     font-size: 35px;
   }
 
-  .game-message {
+  .game-message, .game-message-start {
     p {
       font-size: 30px !important;
       height: 30px !important;
