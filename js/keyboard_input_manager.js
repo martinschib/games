@@ -130,6 +130,7 @@ KeyboardInputManager.prototype.listen = function () {
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
+  document.getElementById("start-game-message").style.display = "none"
   event.preventDefault();
   this.emit("restart");
 };
