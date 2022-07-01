@@ -5,7 +5,7 @@
   "repository": "https://github.com/martinschib/games.git",
   "license": "MIT",
   "scripts": {
-    "dev:css": "sass --watch ./style/main.scss ./style/main.css"
+    "dev:css": "sass --watch ./style/main2.scss ./style/main.css"
   },
   "devDependencies": {
     "sass": "^1.53.0"
