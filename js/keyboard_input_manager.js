@@ -71,6 +71,7 @@ KeyboardInputManager.prototype.listen = function () {
   // Respond to button presses
   this.bindButtonPress(".retry-button", this.restart);
   this.bindButtonPress(".restart-button", this.restart);
+  this.bindButtonPress(".start-button", this.restart);
 
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
 
@@ -129,8 +130,9 @@ KeyboardInputManager.prototype.listen = function () {
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
-  //document.getElementById("start-game-message").style.display = "none"
   event.preventDefault();
+  document.getElementById("game-message").style.display='none'
+  document.getElementById("start-button").style.display='none'
   this.emit("restart");
 };
 
