@@ -131,8 +131,8 @@ KeyboardInputManager.prototype.listen = function () {
 
 KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
-  document.getElementById("game-message").style.display='none'
-  document.getElementById("start-button").style.display='none'
+  document.getElementById("game-message").style = ""
+  document.getElementById("start-button").style.display= 'none'
   this.emit("restart");
 };
 
