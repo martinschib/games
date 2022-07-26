@@ -133,6 +133,7 @@ KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
   document.getElementById("game-message").style = ""
   document.getElementById("start-button").style.display= 'none'
+  document.getElementById("game-rule-img").style.display= 'none'
   this.emit("restart");
 };
 

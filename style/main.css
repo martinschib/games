@@ -45,10 +45,9 @@ input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder 
   color: #9d948c;
 }
 
-.heading:after {
-  content: "";
-  display: block;
-  clear: both;
+.heading {
+  display: flex;
+  flex-direction: column;
 }
 
 h1.title {
@@ -106,7 +105,6 @@ h1.title {
   font-weight: bold;
   border-radius: 3px;
   color: white;
-  margin-top: 8px;
   text-align: center;
 }
 .score-container:after,
@@ -140,11 +138,11 @@ h1.title {
 }
 
 .score-container:after {
-  content: "Score";
+  content: "Poeng";
 }
 
 .best-container:after {
-  content: "Best";
+  content: "Beste";
 }
 
 p {
@@ -704,10 +702,10 @@ hr {
   animation-fill-mode: backwards;
 }
 
-.above-game:after {
-  content: "";
-  display: block;
-  clear: both;
+.above-game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .game-intro {
@@ -728,7 +726,6 @@ hr {
   cursor: pointer;
   display: block;
   text-align: center;
-  float: right;
 }
 
 .game-explanation {

@@ -1,95 +1,85 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2048</title>
 
-<head>
-  <meta charset="utf-8">
-  <title>2048</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <body>
+    <div class="container">
+      <p class="game-explanation mobile">
+        <strong class="important">Mobil:</strong> Dra fingeren på brettet i
+        retningen du ønsker å bevege brikkene.
+      </p>
+      <p class="game-explanation pc">
+        <strong class="important pc">PC:</strong> Bruk piltastene på tastaturet
+        for å bevege brikkene.
+      </p>
 
-<body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
+      <div class="above-game">
+        <div>
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+        <a class="restart-button" style="width: 100px;">Nytt spill</a>
+      </div>
+
+      <div class="game-container">
+        <div class="game-message" id="game-message" style="display: block">
+          <p>Prøv spillet!</p>
+          <img id="game-rule-img" height="200px" src="https://cdn.dribbble.com/users/4139966/screenshots/8234016/media/56d442a2678fe13b85135f9decc6ddc6.gif">
+          <div class="lower">
+            <a class="keep-playing-button">Fortsett spillet</a>
+            <a class="retry-button">Prøv igjen</a>
+            <a class="start-button" id="start-button">Start spillet</a>
+          </div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+        <div class="tile-container"></div>
       </div>
     </div>
 
-    <div class="above-game">
-      <p class="game-intro">Kombiner tallene. Klarer du å få <strong>2048-brikken?</strong></p>
-      <a class="restart-button">Nytt spill</a>
-    </div>
-
-    <div class="game-container">
-      <div class="game-message" id="game-message" style="display:block">
-        <p>Prøv spillet!</p>
-        <div class="lower">
-          <a class="keep-playing-button">Fortsett spillet</a>
-          <a class="retry-button">Prøv igjen</a>
-          <a class="start-button" id="start-button"
-            >Start spillet</a>
-        </div>
-      </div>
-
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
-
-      <div class="tile-container">
-
-      </div>
-    </div>
-    
-    <p class="game-explanation">
-      <strong class="important">Mobil:</strong> Dra fingeren på brettet i retningen du ønsker å bevege brikkene.
-    </p>
-    
-    <p class="game-explanation">
-      <strong class="important">PC:</strong> Bruk piltastene på tastaturet for å bevege brikkene.
-    </p>
-    <hr>
-  </div>
-
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-</body>
-
+    <script src="js/bind_polyfill.js"></script>
+    <script src="js/classlist_polyfill.js"></script>
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_storage_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
+  </body>
 </html>

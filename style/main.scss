@@ -28,7 +28,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -87,7 +86,8 @@ input {
 }
 
 .heading {
-  @include clearfix;
+  display: flex;
+  flex-direction: column;
 }
 
 h1.title {
@@ -129,7 +129,6 @@ h1.title {
   font-weight: bold;
   border-radius: 3px;
   color: white;
-  margin-top: 8px;
   text-align: center;
 
   &:after {
@@ -159,11 +158,11 @@ h1.title {
 }
 
 .score-container:after {
-  content: "Score";
+  content: "Poeng";
 }
 
 .best-container:after {
-  content: "Best";
+  content: "Beste";
 }
 
 p {
@@ -557,7 +556,9 @@ hr {
 }
 
 .above-game {
-  @include clearfix;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .game-intro {
@@ -570,7 +571,6 @@ hr {
   @include button;
   display: block;
   text-align: center;
-  float: right;
 }
 
 .game-explanation {
